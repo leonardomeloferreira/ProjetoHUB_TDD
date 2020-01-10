@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import br.com.rsinet.hub_tdd.ProjetoTDD.pageObject.Home_Page;
 import br.com.rsinet.hub_tdd.ProjetoTDD.pageObject.LogIn_Page;
 import br.com.rsinet.hub_tdd.ProjetoTDD.pageObject.Register_Page;
+import br.com.rsinet.hub_tdd.ProjetoTDD.util.Screenshot;
 
 public class Register_Action {
 
@@ -23,8 +24,8 @@ public class Register_Action {
 
 		wait.until(ExpectedConditions.visibilityOf(Register_Page.txtbx_UserName(driver)));
 
-		Register_Page.txtbx_UserName(driver).sendKeys("leonardo");
-		Register_Page.txtbx_Email(driver).sendKeys("leonardoferreira54@outlook.com.br");
+		Register_Page.txtbx_UserName(driver).sendKeys("leonardow10");
+		Register_Page.txtbx_Email(driver).sendKeys("leonardofewr492387r3e21ira54@outlook.com.br");
 		Register_Page.txtbx_Password(driver).sendKeys("Teste@1234");
 		Register_Page.txtbx_ComfirmPassword(driver).sendKeys("Teste@1234");
 
@@ -41,8 +42,11 @@ public class Register_Action {
 		Register_Page.checkbx_Agree(driver).click();
 		Register_Page.btnbx_Register(driver).click();
 
-		wait.until(ExpectedConditions.textToBePresentInElement(Home_Page.txt_Login(driver), "leonardo"));
+		wait.until(ExpectedConditions.textToBePresentInElement(Home_Page.txt_Login(driver), "leonardow10"));
 
+		WebDriverWait wait2 = new WebDriverWait(driver, 10);
+		Screenshot.captureScreenShot(driver);
+		
 		driver.getCurrentUrl();
 
 	}
@@ -59,8 +63,8 @@ public class Register_Action {
 
 		wait.until(ExpectedConditions.visibilityOf(Register_Page.txtbx_UserName(driver)));
 
-		Register_Page.txtbx_UserName(driver).sendKeys("leonardo34");
-		Register_Page.txtbx_Email(driver).sendKeys("leonardoferreira54@outlook.com.br");
+		Register_Page.txtbx_UserName(driver).sendKeys("leonardo3456");
+		Register_Page.txtbx_Email(driver).sendKeys("leonardoferreir3a54@outlook.com.br");
 		Register_Page.txtbx_Password(driver).sendKeys("Teste@1234");
 		Register_Page.txtbx_ComfirmPassword(driver).sendKeys("Teste@1234");
 
@@ -70,15 +74,15 @@ public class Register_Action {
 
 		Register_Page.lisbx_City(driver).selectByVisibleText("Brazil");
 		Register_Page.txtbx_City(driver).sendKeys("Sao Paulo");
-		Register_Page.txtbx_Address(driver).sendKeys("Rua Alto Alegre");
+		Register_Page.txtbx_Address(driver).sendKeys("Rua Alto Alegre1");
 		Register_Page.txtbx_State(driver).sendKeys("São Paulo");
 		Register_Page.txtbx_PostalCode(driver).sendKeys("06223070");
 
 		Register_Page.checkbx_Agree(driver).click();
 		Register_Page.btnbx_Register(driver).click();
 
-		wait.until(ExpectedConditions.textToBePresentInElement(Home_Page.txt_Login(driver), "leonardo34"));
-
-		driver.getCurrentUrl();
+		WebDriverWait wait3 = new WebDriverWait(driver, 10);
+		Screenshot.captureScreenShot(driver);
+		
 	}
 }

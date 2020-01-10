@@ -13,34 +13,33 @@ import br.com.rsinet.hub_tdd.ProjetoTDD.appModules.Register_Action;
 import junit.framework.Assert;
 
 public class CenarioCadastra {
-		private static ChromeDriver driver;
+	private static ChromeDriver driver;
 
 	@BeforeClass
 	public static void iniciaNavegador() {
-	driver = new ChromeDriver();
-	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
 	}
 
-	
-	
 	@Test
 	public void inciaTeste() {
-		driver.get("https://www.advantageonlineshopping.com/#/");
-		
+		driver.get("https://www.advantageonlineshopping.com/");
+
 		Register_Action.Execute(driver);
-		
-		assertEquals("http://advantageonlineshopping.com/#/", driver.getCurrentUrl());
+
+		assertEquals("https://www.advantageonlineshopping.com/#/", driver.getCurrentUrl());
 	}
-	
+
 	@Test
 	public void inciaTesteComFalha() {
-		driver.get("https://www.advantageonlineshopping.com");
-		
+		driver.get("https://www.advantageonlineshopping.com/");
+
 		Register_Action.ExecuteFalha(driver);
-		
-		assertEquals("http://advantageonlineshopping.com/#/register", driver.getCurrentUrl());
+
+		assertEquals("https://www.advantageonlineshopping.com/#/register", driver.getCurrentUrl());
 	}
-	
+
 	@AfterClass
 	public static void fechaNavegador() {
 		driver.quit();
