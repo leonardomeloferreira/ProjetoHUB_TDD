@@ -31,7 +31,7 @@ public class LogIn_Page {
 	 
 	 public static WebElement btn_CreateAccount(WebDriver driver) {
 		 
-		 element = driver.findElement(By.xpath("/html/body/login-modal/div/div/div[3]/a[2]/font/font"));
+		 element = driver.findElement(By.xpath("/html/body/login-modal/div/div/div[3]/a[2]"));
 		 
 		 return element;
 	 }

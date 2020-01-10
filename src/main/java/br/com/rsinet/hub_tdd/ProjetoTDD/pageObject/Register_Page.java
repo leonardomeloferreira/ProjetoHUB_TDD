@@ -104,10 +104,13 @@ public class Register_Page {
 
 	public static WebElement btnbx_Register(WebDriver driver) {
 		
-		element = driver.findElement(By.name("register_btnundefined"));
+		element = driver.findElement(By.id("register_btnundefined"));
 		
 		return element;
 	}
+	
+	
+}
 
-	}
+	
 

@@ -14,6 +14,12 @@ public class Home_Page {
 		
 		return element;
 	}
-	
+
+	public static WebElement txt_Login(WebDriver driver) {
+
+		element = driver.findElement(By.xpath("//*[@id=\"menuUserLink\"]/span"));
+		
+		return element;
+	}	
 
 }
