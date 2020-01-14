@@ -22,6 +22,30 @@ public class Home_Page {
 		return element;
 	}	
 	
+	public static WebElement lnk_MenuSearch(WebDriver driver) {
+		
+		element = driver.findElement(By.id("menuSearch"));
+		
+		return element;
+	}
+	
+	public static WebElement txt_Search(WebDriver driver) {
+		
+		element = driver.findElement(By.id("autoComplete"));
+		
+		return element;
+	}
 
-
+	public static WebElement lnk_Laptop(WebDriver driver) {
+		
+		element = driver.findElement(By.linkText("HP Pavilion 15t Touch Laptop"));
+		
+		return element;
+	}
+	public static WebElement lnk_Laptops_Home(WebDriver driver) {
+		
+		element = driver.findElement(By.id("laptopsTxt"));
+		
+		return element;
+	}
 }

@@ -50,12 +50,12 @@ public class Register_Action {
 				String sLastName = sheet.getRow(i).getCell(6).getStringCellValue();
 				
 				
-//				double sPhoneNumber = sheet.getRow(i).getCell(7).getNumericCellValue();
+				String sPhoneNumber = String.format("%09d", sheet.getRow(i).getCell(7).getStringCellValue());
 				String ssCity = sheet.getRow(i).getCell(8).getStringCellValue();
 				String sCity = sheet.getRow(i).getCell(9).getStringCellValue();
 				String sAddress = sheet.getRow(i).getCell(10).getStringCellValue();
 				String sState = sheet.getRow(i).getCell(11).getStringCellValue();
-//				double sPostalCode = sheet.getRow(i).getCell(12).getNumericCellValue();
+//				String sPostalCode = sheet.getRow(i).getCell(12).getStringCellValue();
 				String sLogin = sheet.getRow(i).getCell(13).getStringCellValue();
 
 				Register_Page.txtbx_UserName(driver).sendKeys(sUserName);
@@ -64,7 +64,7 @@ public class Register_Action {
 				Register_Page.txtbx_ComfirmPassword(driver).sendKeys(sConfirmPassword);
 				Register_Page.txtbx_FirstName(driver).sendKeys(sFirstName);
 				Register_Page.txtbx_LastName(driver).sendKeys(sLastName);
-//				Register_Page.txtbx_PhoneNumber(driver).sendKeys(sPhoneNumber);
+				Register_Page.txtbx_PhoneNumber(driver).sendKeys(sPhoneNumber);
 				Register_Page.lisbx_City(driver).selectByVisibleText(ssCity);
 				Register_Page.txtbx_City(driver).sendKeys(sCity);
 				Register_Page.txtbx_Address(driver).sendKeys(sAddress);
@@ -85,22 +85,6 @@ public class Register_Action {
 			ioe.printStackTrace();
 		}
 	
-		
-		
-	
-//		Register_Page.txtbx_Password(driver).sendKeys("Teste@1234");
-//		Register_Page.txtbx_ComfirmPassword(driver).sendKeys("Teste@1234");
-//
-//		Register_Page.txtbx_FirstName(driver).sendKeys("Leonardo");
-//		Register_Page.txtbx_LastName(driver)
-//		Register_Page.txtbx_PhoneNumber(driver)
-//
-//		Register_Page.lisbx_City(driver)
-//		Register_Page.txtbx_City(driver)
-//		Register_Page.txtbx_Address(driver)
-//		Register_Page.txtbx_State(driver).
-//		Register_Page.txtbx_PostalCode(driver)
-
 		Register_Page.checkbx_Agree(driver).click();
 		Register_Page.btnbx_Register(driver).click();
 

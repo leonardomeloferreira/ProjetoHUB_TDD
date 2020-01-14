@@ -9,14 +9,18 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import br.com.rsinet.hub_tdd.ProjetoTDD.appModules.Pesquisa_Action;
+import br.com.rsinet.hub_tdd.ProjetoTDD.appModules.Category_Action;
 import br.com.rsinet.hub_tdd.ProjetoTDD.appModules.Register_Action;
+import br.com.rsinet.hub_tdd.ProjetoTDD.utility.Constant;
+import br.com.rsinet.hub_tdd.ProjetoTDD.utility.ExcelUtils;
 import junit.framework.Assert;
 
-public class CenarioCadastra {
+public class Cadastra_TC {
 	private static ChromeDriver driver;
 
 	@BeforeClass
-	public static void iniciaNavegador() {
+	public static void iniciaNavegador() throws Exception {
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
@@ -42,6 +46,5 @@ public class CenarioCadastra {
 
 	@AfterClass
 	public static void fechaNavegador() {
-		driver.quit();
 	}
 }
