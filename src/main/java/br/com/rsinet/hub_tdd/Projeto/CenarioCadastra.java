@@ -23,7 +23,7 @@ public class CenarioCadastra {
 	}
 
 	@Test
-	public void inciaTeste() {
+	public void inciaTeste() throws Exception {
 		driver.get("https://www.advantageonlineshopping.com/");
 
 		Register_Action.Execute(driver);
